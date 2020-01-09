@@ -147,6 +147,27 @@ function get_requirements()
             'solution'    => __('GD extension is required. How to '
                 . '<a target="_blank" href="http://www.php.net/manual/en/image.setup.php">install/configure</a>.')
         ),
+    
+        'File <code>composer.phar</code> exists' => array(
+            'requirement' => __('File <code>composer.phar</code> exists'),
+            'fn'          => file_exists(ABS_PATH . 'composer.phar'),
+            'solution'    => sprintf(
+                __('The file composer.phar must exist to proceed.
+                    Maybe there was a problem while decompressing OSClass zip file.
+                    Alternatively you can download composer following the instructions: <a href="https://getcomposer.org/download/" target="_blank">https://getcomposer.org/download/</a>'),
+                ABS_PATH
+            )
+        ),
+    
+        'Folder <code>oc-includes/vendor</code> is writable' => array(
+            'requirement' => __('<code>oc-includes/vendor</code> folder is writable'),
+            'fn'          => is_writable(ABS_PATH . 'oc-includes/vendor/'),
+            'solution'    => sprintf(
+                __('<code>vendor</code> folder has to be writable, i.e.: '
+                    .'<code>chmod 0755 %soc-includes/vendor/</code>'),
+                ABS_PATH
+            )
+        ),
 
         'Folder <code>oc-content/uploads</code> exists' => array(
             'requirement' => __('Folder <code>oc-content/uploads</code> exists'),
