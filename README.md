@@ -17,11 +17,26 @@ For any support related query, please visit our official support forum.
 
 ## Develop
 
-Clone the repository and the submodules.
+Clone the repository
+```
+$> git clone git@github.com:navjottomer/Osclass.git
+```
+After that you need to install composer dependencies.
+If you don't have composer, just run the following and it will take care of everything for you:
+```
+$> make 
+```
 
+If you have composer globally or locally via `composer.phar`, you can just run:
 ```
-$> git clone --recursive git@github.com:navjottomer/Osclass.git
+$> ./composer.phar install --dev
 ```
+
+Tip: There is also a make command to install the dependencies
+```
+$> make install
+```
+
 ## Pull Request
 Want to help create a pull request from you clone, just make sure of few things
 
