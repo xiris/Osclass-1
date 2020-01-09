@@ -42,6 +42,9 @@
     "ext-memcache": "Will enable to communicate with memcached server"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-master"
+    "roave/security-advisories": "dev-master",
+    "phpmd/phpmd" : "@stable",
+    "squizlabs/php_codesniffer": "3.*",
+    "friendsofphp/php-cs-fixer": "^2.16"
   }
 }
